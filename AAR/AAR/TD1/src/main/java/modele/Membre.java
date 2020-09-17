@@ -9,12 +9,14 @@ public class Membre {
     private String surnom;
     private Collection<Projet> responsable;
     private Collection<Projet> participe;
+    private Collection<CompetenceMembre> declare;
 
     // Constructeurs
 
     public Membre() {
-        responsable=new ArrayList<>();
-        participe=new ArrayList<>();
+        this.responsable=new ArrayList<>();
+        this.participe=new ArrayList<>();
+        this.declare=new ArrayList<>();
     }
 
     public Membre(String login, String motdepasse, String surnom) {
@@ -60,5 +62,13 @@ public class Membre {
 
     public void setParticipe(Collection<Projet> participe) {
         this.participe = participe;
+    }
+
+    public Collection<CompetenceMembre> getDeclare() {
+        return declare;
+    }
+
+    public void setDeclare(Collection<CompetenceMembre> declare) {
+        this.declare = declare;
     }
 }
